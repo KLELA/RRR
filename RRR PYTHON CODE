@@ -1,0 +1,22 @@
+import sympy as sym
+##sym.init_printing() 1.22474487139  0.78539816339
+import math
+import numpy as np
+x=1.22474487139
+y=1.22474487139
+phai=0.78539816339
+x1=2* math.atan((2*y + (-(x**2 + y**2)*(x**2 + y**2 - 4))**(1/2))/(x**2 + 2*x + y**2))
+x11=2* math.atan((2*y - (-(x**2 + y**2)*(x**2 + y**2 - 4))**(1/2))/(x**2 + 2*x + y**2))
+x2=-2* math.atan((-(x**2 + y**2)*(x**2 + y**2 - 4))**(1/2)/(x**2 + y**2))
+x22=2* math.atan((-(x**2 + y**2)*(x**2 + y**2 - 4))**(1/2)/(x**2 + y**2))
+x3=2* math.atan(((- x**4 - 2*x**2*y**2 + 4*x**2 - y**4 + 4*y**2)**(1/2) - 2*y*math.cos(phai) + 2*x*math.sin(phai))/(x**2 + 2*math.cos(phai)*x + y**2 + 2*math.sin(phai)*y))
+x33=-2* math.atan(((- x**4 - 2*x**2*y**2 + 4*x**2 - y**4 + 4*y**2)**(1/2) + 2*y*math.cos(phai) - 2*x*math.sin(phai))/(x**2 + 2*math.cos(phai)*x + y**2 + 2*math.sin(phai)*y))
+x1=math.degrees(x1)
+x11=math.degrees(x11)
+x2=math.degrees(x2)
+x22=math.degrees(x22)
+x3=math.degrees(x3)
+x33=math.degrees(x33)
+print(x1,x11)
+print(x2,x22)
+print(x3,x33)
